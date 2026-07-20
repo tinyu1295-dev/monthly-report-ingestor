@@ -3,7 +3,7 @@ const { processGcsFinalizeEvent } = require("./processGcsFinalizeEvent");
 
 const app = express();
 app.use(express.json({ limit: "10mb" }));
-
+// this is a health check endpoint for GCP load balancer
 app.post("/", async (req, res) => {
     try {
         const ceType = req.header("ce-type") || req.header("Ce-Type");
