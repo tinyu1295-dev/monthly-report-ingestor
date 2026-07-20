@@ -28,5 +28,6 @@ app.post("/", async (req, res) => {
     }
 });
 
+// default to 8080 when PORT is not set by the environment
 const port = process.env.PORT || 8080;
 app.listen(port, () => console.log(`Listening on :${port}`));
